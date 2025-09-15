@@ -3,8 +3,8 @@ const myFilter = <T>(callBack : (item : T[]) => void, targetValue : T, array : T
     const filterArr : T[] = []
     
     for (let i = 0; i < array.length; i++) {
-        if(array[i] === targetValue){
-            filterArr.push(array[i])
+        if(array[i] === targetValue && array[i] !== undefined){
+            filterArr.push(array[i] as T)
         }
     }
     callBack(filterArr)
