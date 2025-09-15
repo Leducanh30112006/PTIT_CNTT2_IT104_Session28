@@ -1,8 +1,10 @@
-const myForEach = <T>(callBack : (currValue:T, index:number, array: T[]) => void, array : T[]) => {
+const myForEach = <T>(callBack : (currValue:T, index:number, array: Array<T>) => void, array : Array<T>) => {
 
     for (let i = 0; i < array.length; i++) {
 
-        callBack(array[i], i, array)
+        if (array[i] !== undefined) {
+            callBack(array[i] as T, i, array)
+        }
     }
 }
 

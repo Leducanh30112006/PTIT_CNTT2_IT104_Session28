@@ -1,8 +1,9 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const myFilter = (callBack, targetValue, array) => {
     const filterArr = [];
     for (let i = 0; i < array.length; i++) {
-        if (array[i] === targetValue) {
+        if (array[i] === targetValue && array[i] !== undefined) {
             filterArr.push(array[i]);
         }
     }

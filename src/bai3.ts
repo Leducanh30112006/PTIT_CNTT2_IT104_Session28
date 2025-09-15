@@ -1,10 +1,12 @@
 const numbers : number[] = [1,2,3,4,5,6,7]
 
-const processArray = (callback : (item:number) =>void, array : number[]) => {
+const processArray = (callback : (item:number) => void, array : (number | undefined)[]) => {
 
     for (let i = 0; i < array.length; i++) {
 
-        callback(array[i]);
+        if (array[i] !== undefined) {
+            callback(array[i]!);
+        }
     }
 }
 const callbackFunction = (item : number) => {

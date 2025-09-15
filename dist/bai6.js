@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const task1 = () => {
     setTimeout(() => {
         console.log("Task 1 được thực thi");

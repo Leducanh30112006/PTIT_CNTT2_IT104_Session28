@@ -1,7 +1,10 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const myForEach = (callBack, array) => {
     for (let i = 0; i < array.length; i++) {
-        callBack(array[i], i, array);
+        if (array[i] !== undefined) {
+            callBack(array[i], i, array);
+        }
     }
 };
 const display = (currValue, index, array) => {
